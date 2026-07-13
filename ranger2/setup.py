@@ -37,7 +37,8 @@ setup(
             'look_for_gate = ranger2.LookForGate:main',
             'go_to_gate = ranger2.GoToGate:main',
             'cube_kill_switch = ranger2.cube_kill_switch:main',
-            'record = ranger2.Record:main'
+            'record = ranger2.Record:main',
+            'odom_to_vision_pose = ranger2.odom_to_vision_pose:main'
         ],
     },
 )

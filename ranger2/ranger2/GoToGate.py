@@ -57,7 +57,7 @@ class goToGateNode(Node):
         """
 
         #Configure me plz :3
-        self.waypointPeriod = 5 #time between sending waypoints
+        self.waypointPeriod = 0.10 #time between sending waypoints
 
         self.targetDepth = 0.2# -0.5
         self.positionError = 0.10
@@ -199,6 +199,9 @@ class goToGateNode(Node):
     def posCallback(self,msg):
         #print("setting self.pos")
         self.pos = msg
+
+        if self.state == 0:
+            self.waypoint = self.pos
 
     #periodically send waypoints,  test if waypoints are reached, and publish information on state
     def sendWaypoint(self):
